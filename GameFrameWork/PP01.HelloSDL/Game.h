@@ -1,3 +1,4 @@
+#pragma once
 #include "SDL.h"
 #include <iostream>
 
@@ -10,7 +11,7 @@ public:
 		int width, int height, bool fullscreen);
 
 	void render();
-	void update() {};
+	void update();
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
@@ -20,5 +21,6 @@ private:
 	SDL_Renderer* m_pRenderer = 0;
 	bool m_bRunning = true;
 	SDL_Texture* m_pTexture;
-	SDL_Rect m_sourceRectangle; 
-	SDL_Rect m_destubationRetangle; };
+	SDL_Rect m_sourceRectangle; //¿øº» »ç°¢Çü
+	SDL_Rect m_destubationRetangle; //´ë»ó »ç°¢Çü
+};
