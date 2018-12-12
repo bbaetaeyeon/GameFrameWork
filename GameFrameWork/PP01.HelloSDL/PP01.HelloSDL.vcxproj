@@ -23,7 +23,7 @@
     <ProjectGuid>{BB7BB0FC-D780-485C-87F1-762E5F5234EB}</ProjectGuid>
     <RootNamespace>PP01HelloSDL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
-    <ProjectName>PP10.Polymorphism</ProjectName>
+    <ProjectName>PP11.AbstractClass</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,9 +123,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="소스1.cpp" />
+    <ClCompile Include="SDLGameObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -134,6 +133,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="LoaderParams.h" />
+    <ClInclude Include="SDLGameObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
