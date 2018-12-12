@@ -1,5 +1,8 @@
 #pragma once
 #include "TextureManager.h"
+#include "Player.h"
+
+
 
 class Game
 {
@@ -21,9 +24,6 @@ private:
 	bool m_bRunning = true;
 
 	int m_currentFrame;
-	//TextureManager m_textureManager;
-
-	//SDL_Texture* m_pTexture;
-	//SDL_Rect m_sourceRectangle; //¿øº» »ç°¢Çü
-	//SDL_Rect m_destubationRetangle; //´ë»ó »ç°¢Çü
+	GameObject m_go;
+	Player m_player;
 };
