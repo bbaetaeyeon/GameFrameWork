@@ -5,15 +5,15 @@
 #include <map>
 #include <SDL_image.h>
 #include "TextureManager.h"
-
+#include "LoaderParams.h"
 class GameObject
 {
 public:
-	void load(int x, int y, int width, int height,
+	virtual void load(int x, int y, int width, int height,
 		std::string textureID);
-	void draw(SDL_Renderer* pRenderer);
-	void update();
-	void clean();
+	virtual void draw(SDL_Renderer* pRenderer);
+	virtual void update();
+	virtual void clean() {  }
 protected:
 	std::string m_textureID;
 	int m_currentFrame;
@@ -22,4 +22,5 @@ protected:
 	int m_y;
 	int m_width;
 	int m_height;
+
 };
