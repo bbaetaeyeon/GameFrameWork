@@ -5,7 +5,6 @@ InputHandler* InputHandler::s_pInstance = 0;
 typedef Game TheGame;
 InputHandler::InputHandler()
 {
-	// »ý¼ºÀÚ 
 	m_mousePosition = new Vector2D(0, 0);
 	for (int i = 0; i < 6; i++)
 	{
@@ -15,7 +14,7 @@ InputHandler::InputHandler()
 
 void InputHandler::clean()
 {
-	// ÇâÈÄ Ãß°¡ 
+	// ???? ?���Ƣ� 
 }
 
 void InputHandler::update()
@@ -26,50 +25,50 @@ void InputHandler::update()
 
 		/*if (event.type == SDL_QUIT)
 		{
-			TheGame::Instance()->quit();
+		TheGame::Instance()->quit();
 		}
 		if (event.type == SDL_KEYUP)
 		{
-			m_keystates = SDL_GetKeyboardState(0);
+		m_keystates = SDL_GetKeyboardState(0);
 		}
 		if (event.type == SDL_KEYDOWN)
 		{
-			m_keystates = SDL_GetKeyboardState(0);
+		m_keystates = SDL_GetKeyboardState(0);
 		}*/
 		/*if (event.type == SDL_MOUSEMOTION)
 		{
-			m_mousePosition->setX(event.motion.x);
-			m_mousePosition->setY(event.motion.y);
+		m_mousePosition->setX(event.motion.x);
+		m_mousePosition->setY(event.motion.y);
 		}
 		else if (event.type == SDL_MOUSEBUTTONDOWN)
 		{
-			if (event.button.button == SDL_BUTTON_LEFT)
-			{
-				m_mouseButtonStates[LEFT] = true;
-			}
-			if (event.button.button == SDL_BUTTON_MIDDLE)
-			{
-				m_mouseButtonStates[MIDDLE] = true;
-			}
-			if (event.button.button == SDL_BUTTON_RIGHT)
-			{
-				m_mouseButtonStates[RIGHT] = true;
-			}
+		if (event.button.button == SDL_BUTTON_LEFT)
+		{
+		m_mouseButtonStates[LEFT] = true;
+		}
+		if (event.button.button == SDL_BUTTON_MIDDLE)
+		{
+		m_mouseButtonStates[MIDDLE] = true;
+		}
+		if (event.button.button == SDL_BUTTON_RIGHT)
+		{
+		m_mouseButtonStates[RIGHT] = true;
+		}
 		}
 		else if (event.type == SDL_MOUSEBUTTONUP)
 		{
-			if (event.button.button == SDL_BUTTON_LEFT)
-			{
-				m_mouseButtonStates[LEFT] = false;
-			}
-			if (event.button.button == SDL_BUTTON_MIDDLE)
-			{
-				m_mouseButtonStates[MIDDLE] = false;
-			}
-			if (event.button.button == SDL_BUTTON_RIGHT)
-			{
-				m_mouseButtonStates[RIGHT] = false;
-			}
+		if (event.button.button == SDL_BUTTON_LEFT)
+		{
+		m_mouseButtonStates[LEFT] = false;
+		}
+		if (event.button.button == SDL_BUTTON_MIDDLE)
+		{
+		m_mouseButtonStates[MIDDLE] = false;
+		}
+		if (event.button.button == SDL_BUTTON_RIGHT)
+		{
+		m_mouseButtonStates[RIGHT] = false;
+		}
 		}*/
 		switch (event.type)
 		{

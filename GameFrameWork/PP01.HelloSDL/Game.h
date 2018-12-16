@@ -3,6 +3,7 @@
 #include "Enemy.h"
 #include <vector>
 #include "LoaderParams.h"
+#include "GameStateMachine.h"
 
 
 class Game
@@ -44,7 +45,7 @@ private:
 	/*GameObject* m_go;
 	GameObject* m_player;
 	GameObject* m_enemy;*/
-
+	GameStateMachine* m_pGameStateMachine;
 };
 
 

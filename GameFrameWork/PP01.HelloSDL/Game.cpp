@@ -1,6 +1,10 @@
 #include "Game.h"
 #include "TextureManager.h"
 #include "InputHandler.h"
+#include "GameStateMachine.h"
+#include "MenuState.h"
+#include "PlayState.h"
+
 Game* Game::s_pInstance = 0;
 
 
@@ -10,6 +14,8 @@ bool Game::init(const char* title, int xpos, int ypos,
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
 	{
 		m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, fullscreen);
+		m_pGameStateMachine = new GameStateMachine();
+		m_pGameStateMachine->changeState(MenuState::Instance());
 
 		if (m_pWindow != 0)
 		{
@@ -59,6 +65,10 @@ void Game::clean()
 void Game::handleEvents()
 {
 	TheInputHandler::Instance()->update();
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN))
+	{
+		m_pGameStateMachine->changeState(PlayState::Instance());
+	}
 }
 
 void Game::update()

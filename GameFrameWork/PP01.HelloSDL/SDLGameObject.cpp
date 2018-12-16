@@ -1,4 +1,3 @@
-
 #include "SDLGameObject.h"
 #include "LoaderParams.h"
 #include "TextureManager.h"
