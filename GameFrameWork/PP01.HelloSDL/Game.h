@@ -46,7 +46,5 @@ private:
 	GameObject* m_enemy;*/
 
 };
-
-
-
 typedef Game TheGame;
+
